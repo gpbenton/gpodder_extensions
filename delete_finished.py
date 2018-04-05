@@ -47,7 +47,7 @@ class gPodderExtension:
         """
         if episode.is_finished():
             if episode.state == gpodder.STATE_DOWNLOADED:
-                logger.warning("delete_finished: deleting file {}".format(episode.trimmed_title))
+                logger.info("deleting file {}".format(episode.trimmed_title))
                 episode.delete_from_disk()
             if episode.check_is_new():
                 episode.mark(is_played=True)
